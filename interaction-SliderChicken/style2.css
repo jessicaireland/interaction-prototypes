@@ -1,0 +1,45 @@
+
+body{
+    background: hsla(121, 78%, 63%, 1);
+    
+    background: radial-gradient(circle, hsla(121, 78%, 63%, 1) 0%, hsla(132, 67%, 64%, 0.8) 51%, hsla(157, 51%, 66%, 1) 100%);
+    
+    background: -moz-radial-gradient(circle, hsla(121, 78%, 63%, 1) 0%, hsla(132, 67%, 64%, 0.8) 51%, hsla(157, 51%, 66%, 1) 100%);
+    
+    background: -webkit-radial-gradient(circle, hsla(121, 78%, 63%, 1) 0%, hsla(132, 67%, 64%, 0.8) 51%, hsla(157, 51%, 66%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#59EA5C", endColorstr="#67E17F", GradientType=1 );
+
+}
+.playground {
+    display: flex;
+    flex-direction: row;
+}
+img {
+    width: 100px;
+    height: 300px;
+}
+.container{
+    width: 100%;
+}
+.slider {
+    width: 100%;
+    height: 20px;
+    background-color: wheat;
+    border-radius: 20px;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+    -webkit-appearance: none;
+}
+.slider:hover {
+    opacity: 1;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-image: url(/Users/jessicaireland/workspace/interaction-prototypes/interaction-SliderChicken/images/chixToUse.png);
+    cursor: pointer;
+}
