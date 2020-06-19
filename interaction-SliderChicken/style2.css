@@ -14,43 +14,113 @@ body{
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#59EA5C", endColorstr="#67E17F", GradientType=1 );
 
 }
+h1 {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    border: 1px solid rgb(22, 97, 22);
+    padding: 1em;
+}
 .playground {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    margin: 4em;
-    padding: 2em;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    margin: 1em;
+    padding: 1em;
 }
 .image-right {
     width: 350px;
-    height: 200px;
+    height: 250px;
+}
+.chix-pic {
+    width: 50px;
+    height: 100px;
 }
 .image-left {
     width: 200px;
-    height: 200px;
+    height: 250px;
 }
 .container{
     width: 100%;
 }
-.slider {
-    width: 50%;
-    height: 20px;
-    background-color: wheat;
-    border-radius: 20px;
-    opacity: 0.6;
-    transition: opacity 0.3s;
-    -webkit-appearance: none;
+.button-wrapper {
+    display: flex;
+    justify-content: center;
 }
-.slider:hover {
+.chix-button {
+    width: 11.5rem;
+    height: 4rem;
+    padding: 2px 2px 0;
+    background: rgb(25, 151, 25);
+    border-radius: 20px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+    perspective: 30rem;
+}
+.cover, .cover > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.chix-p {
+    color: white;
+    text-align: center;
+}
+.inner {
+    background-color: rgb(22, 97, 22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.outer {
+    background-color: green;
+    transform: translateZ(0.25rem);
+}
+/* .edge {
+    background-color: green;
+    top: 0.25rem;
+    height: 0.5;
+    transform: rotateX(90deg);
+    transform-origin: center top;
+} */
+.inner, .outer {
+    border-radius: 0.25rem;
+    background-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 100%);
+}
+.chix-button:hover .cover {
+    transform: rotateX(-120deg);
+}
+.chix-button, .chix-button div {
+    transition-duration: 0.7s;
+    transition-timing-function: ease;
+}
+.cover {
+    transform-origin: center bottom;
+    transform-style: preserve-3d;
+    text-align: center;
+    color: white;
+    z-index: 99;
+}
+.shadow {
+    position: absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    height:3.2rem;
+    border-radius: 0.5rem;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, transparent 100%);
+    transform:rotateX(90deg);
+    transform-origin: center top;
+    opacity: 0;
+}
+.chix-button:hover .shadow {
+    transform: rotateX(45deg) scale(0.95);
     opacity: 1;
 }
-.slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    background-image: url(interaction-SliderChicken/images/chixToUse.png);
-    cursor: pointer;
-}
+
+
+
