@@ -1,5 +1,8 @@
 
 body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     background: hsla(121, 78%, 63%, 1);
     
     background: radial-gradient(circle, hsla(121, 78%, 63%, 1) 0%, hsla(132, 67%, 64%, 0.8) 51%, hsla(157, 51%, 66%, 1) 100%);
@@ -14,16 +17,24 @@ body{
 .playground {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin: 4em;
+    padding: 2em;
 }
-img {
-    width: 100px;
-    height: 300px;
+.image-right {
+    width: 350px;
+    height: 200px;
+}
+.image-left {
+    width: 200px;
+    height: 200px;
 }
 .container{
     width: 100%;
 }
 .slider {
-    width: 100%;
+    width: 50%;
     height: 20px;
     background-color: wheat;
     border-radius: 20px;
@@ -40,6 +51,6 @@ img {
     width: 20px;
     height: 20px;
     border-radius: 20px;
-    background-image: url(/Users/jessicaireland/workspace/interaction-prototypes/interaction-SliderChicken/images/chixToUse.png);
+    background-image: url(interaction-SliderChicken/images/chixToUse.png);
     cursor: pointer;
 }
