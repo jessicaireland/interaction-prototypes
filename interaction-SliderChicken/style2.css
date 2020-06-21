@@ -80,13 +80,7 @@ h1 {
     background-color: green;
     transform: translateZ(0.25rem);
 }
-/* .edge {
-    background-color: green;
-    top: 0.25rem;
-    height: 0.5;
-    transform: rotateX(90deg);
-    transform-origin: center top;
-} */
+
 .inner, .outer {
     border-radius: 0.25rem;
     background-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 100%);
